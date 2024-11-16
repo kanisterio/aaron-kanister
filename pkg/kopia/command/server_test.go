@@ -59,7 +59,7 @@ func (kServer *KopiaServerTestSuite) TestServerCommands(c *check.C) {
 				}
 				return ServerStart(args)
 			},
-			expectedLog: "bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --tls-generate-cert --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 --enable-pprof --metrics-listen-addr=a-server-address:51516 > /dev/null 2>&1 &",
+			expectedLog: "kando process client create --as-json -- bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --tls-generate-cert --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 --enable-pprof --metrics-listen-addr=a-server-address:51516 > /dev/null 2>&1 &",
 		},
 		{
 			f: func() []string {
@@ -77,7 +77,7 @@ func (kServer *KopiaServerTestSuite) TestServerCommands(c *check.C) {
 				}
 				return ServerStart(args)
 			},
-			expectedLog: "bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --tls-generate-cert --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 > /dev/null 2>&1 &",
+			expectedLog: "kando process client create --as-json -- bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --tls-generate-cert --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 > /dev/null 2>&1 &",
 		},
 		{
 			f: func() []string {
@@ -95,7 +95,7 @@ func (kServer *KopiaServerTestSuite) TestServerCommands(c *check.C) {
 				}
 				return ServerStart(args)
 			},
-			expectedLog: "bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --tls-generate-cert --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500",
+			expectedLog: "kando process client create --as-json -- bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --tls-generate-cert --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500",
 		},
 		{
 			f: func() []string {
@@ -113,7 +113,7 @@ func (kServer *KopiaServerTestSuite) TestServerCommands(c *check.C) {
 				}
 				return ServerStart(args)
 			},
-			expectedLog: "bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 > /dev/null 2>&1 &",
+			expectedLog: "kando process client create --as-json -- bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 > /dev/null 2>&1 &",
 		},
 		{
 			f: func() []string {
@@ -133,7 +133,7 @@ func (kServer *KopiaServerTestSuite) TestServerCommands(c *check.C) {
 				}
 				return ServerStart(args)
 			},
-			expectedLog: "bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --htpasswd-file=/path/htpasswd --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 --readonly > /dev/null 2>&1 &",
+			expectedLog: "kando process client create --as-json -- bash -o errexit -c kopia --log-level=error --config-file=path/kopia.config --log-dir=cache/log server start --address=a-server-address --tls-cert-file=/path/to/cert/tls.crt --tls-key-file=/path/to/key/tls.key --htpasswd-file=/path/htpasswd --server-username=a-username@a-hostname --server-password=a-user-password --server-control-username=a-username@a-hostname --server-control-password=a-user-password --cache-directory=cache/dir --content-cache-size-limit-mb=500 --metadata-cache-size-limit-mb=500 --readonly > /dev/null 2>&1 &",
 		},
 		{
 			f: func() []string {
